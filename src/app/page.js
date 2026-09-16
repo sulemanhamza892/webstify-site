@@ -89,7 +89,7 @@ function HeroVisual() {
         <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/70"></span>
         <span className="w-2.5 h-2.5 rounded-full bg-green-500/70"></span>
       </div>
-            <div className="relative h-64 md:h-96">
+      <div className="relative w-full aspect-[16/10]">
         <AnimatePresence mode="wait">
           <motion.img
             key={index}
@@ -99,7 +99,7 @@ function HeroVisual() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.6 }}
-                                               className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover"
             style={{ objectPosition: "center 15%" }}
           />
         </AnimatePresence>
@@ -411,10 +411,17 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.6 }}
               transition={{ duration: 0.5 }}
               className="text-center"
             >
+              <motion.div
+                initial={{ scale: 0.5, opacity: 0.3 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true, amount: 0.6 }}
+                transition={{ duration: 0.4 }}
+                className="md:hidden w-3 h-3 rounded-full bg-blue-500 shadow-[0_0_10px_4px_rgba(60,108,246,0.6)] mx-auto mb-4"
+              ></motion.div>
               <div className="text-5xl font-semibold text-white/20 mb-4">01</div>
               <h3 className="text-white font-medium text-lg mb-2">Browse the Collection</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
@@ -424,10 +431,17 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.6 }}
               transition={{ duration: 0.5, delay: 0.15 }}
               className="text-center"
             >
+              <motion.div
+                initial={{ scale: 0.5, opacity: 0.3 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true, amount: 0.6 }}
+                transition={{ duration: 0.4, delay: 0.15 }}
+                className="md:hidden w-3 h-3 rounded-full bg-blue-500 shadow-[0_0_10px_4px_rgba(60,108,246,0.6)] mx-auto mb-4"
+              ></motion.div>
               <div className="text-5xl font-semibold text-white/20 mb-4">02</div>
               <h3 className="text-white font-medium text-lg mb-2">Purchase &amp; Customize</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
@@ -437,10 +451,17 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.6 }}
               transition={{ duration: 0.5, delay: 0.3 }}
               className="text-center"
             >
+              <motion.div
+                initial={{ scale: 0.5, opacity: 0.3 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true, amount: 0.6 }}
+                transition={{ duration: 0.4, delay: 0.3 }}
+                className="md:hidden w-3 h-3 rounded-full bg-blue-500 shadow-[0_0_10px_4px_rgba(60,108,246,0.6)] mx-auto mb-4"
+              ></motion.div>
               <div className="text-5xl font-semibold text-white/20 mb-4">03</div>
               <h3 className="text-white font-medium text-lg mb-2">Launch Your Site</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
